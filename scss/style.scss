@@ -1,0 +1,21 @@
+// ====================================
+// ОСНОВНОЙ ФАЙЛ СТИЛЕЙ
+// ====================================
+
+// Утилиты и переменные
+@import "./utils/variabels";
+@import "./utils/mixin";
+
+// Базовые стили
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/base";
+
+// Компоненты
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/buttons";
+@import "./components/burger";
+@import "./components/hero";
+@import "./components/what-we-do";
+@import "./components/check-work";

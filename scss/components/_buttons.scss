@@ -1,0 +1,76 @@
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.auth--desktop {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.auth--mobile {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: 30px;
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: all $transition-base;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding: 16px 32px;
+  }
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: $white;
+
+  &:hover {
+    background: darken($primary-color, 8%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-ghost {
+  background: transparent;
+  color: $text-secondary;
+  font-weight: 400;
+
+  &:hover {
+    color: $text-primary;
+  }
+
+  @media (max-width: $mobile) {
+    background: $bg-main;
+    color: $text-primary;
+  }
+}

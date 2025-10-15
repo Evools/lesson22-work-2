@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+}
+
+.nav__link {
+  color: $text-secondary;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+  transition: color $transition-base;
+  white-space: nowrap;
+
+  &:first-child,
+  &.active {
+    color: $text-primary;
+  }
+
+  &:hover {
+    color: $text-primary;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 18px;
+    padding: 18px 20px;
+    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    color: $text-primary;
+
+    &:hover {
+      background: $bg-main;
+    }
+  }
+}
